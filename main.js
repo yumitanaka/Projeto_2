@@ -20,8 +20,30 @@ const App = {
             document.body.appendChild(this.app);
 
             //Cabeçalho
-            this.conteudoNovo = document.createTextNode("Cabeçalho");
-            this.app.appendChild(this.conteudoNovo);
+            //Criando link Gmail
+            this.gmail = document.createElement("a");
+            this.gmail.setAttribute("href", "");
+            this.gmail.textContent = "Gmail";
+            this.gmail.setAttribute("style", "text-decoration: none;margin-right: 15px;");
+            //Função mouseOver e mouseOut
+            this.gmail.onmouseover = function ()
+            {
+                this.gmail.style.textDecoration = "underline";
+            };
+
+            this.gmail.onmouseout = function ()
+            {
+                this.gmail.style.textDecoration = "none";
+            };
+            this.app.appendChild(this.gmail);
+
+
+            //Criando link Imagens
+            this.imagens = document.createElement("a");
+            this.imagens.setAttribute("href", "");
+            this.imagens.textContent = "Imagens";
+            this.app.appendChild(this.imagens);
+
 
             //Container1
             this.container1 = document.createElement("div");

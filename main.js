@@ -137,7 +137,6 @@ const App = {
             this.barraPesquisa.style.backgroundRepeat="no-repeat"; 
             this.barraPesquisa.style.backgroundSize="25px 25px";
             this.barraPesquisa.style.paddingLeft="30px";
-           
             this.barraPesquisa.style.height="30px";
             this.barraPesquisa.style.width="40%";
             this.barraPesquisa.style.border="1px solid #d0d0d0";

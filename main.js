@@ -129,7 +129,6 @@ const App = {
             this.barraPesquisaDiv.style.display="flex";
             this.barraPesquisaDiv.style.flexDirection="colum";
             this.barraPesquisaDiv.style.alignItems="center";
-            this.barraPesquisaDiv.style.background="green"; //Remover
             document.body.appendChild(this.barraPesquisaDiv);
             //barraPesquisa
             this.barraPesquisa = document.createElement("input");
@@ -147,33 +146,59 @@ const App = {
             this.barraPesquisa.style.boxShadow="0 0 0 0 rgba(136, 136, 136, 0)";
             this.barraPesquisa.style.fontSize="small";
             this.barraPesquisa.style.transition= "box-shadow .3s";
-            
-            console.log(this);
-
-            //this.barraPesquisa.style.background="silver"
             this.barraPesquisaDiv.appendChild(this.barraPesquisa);
-            //Adicionando os icones na barra de pesquisa
-            //Icone Lupa
-            //this.lupa = document.createElement("img");
-            //Setar estilo da div
-            //this.lupa.src = 'imagens/magnifier.png';
-            //this.lupa.style.height = "50%";
-            //this.lupa.style.marginRight = "15px";
-            //this.barraPesquisaDiv.appendChild(this.lupa);
-            
-            //Adicionando conteudo a barraPesquisaDiv
-            //this.barraPesquisaDiv.appendChild(this.lupa);
-
-
-            //aposBarraPesquisa1
+    
+            //aposBarraPesquisa1 - Google Search and I'm Feeling Lucky
             this.aposBarraPesquisa1 = document.createElement("div");
             //Setar estilo da div
-            this.aposBarraPesquisa1.setAttribute("style", "text-align:center; height:50px; background: pink");
+            this.aposBarraPesquisa1.style.textAlign="center";
+            this.aposBarraPesquisa1.style.height="50px";
+            this.aposBarraPesquisa1.style.lineHeight="50px";
+            this.aposBarraPesquisa1.style.fontFamily= "arial";
+            //Adicionando conteudo Google Search
+            this.googleSearch = document.createElement("button");
+            this.googleSearch.style.height="36px";
+            this.googleSearch.style.border= "1px solid #f2f2f2";
+            this.googleSearch.style.borderRadius= "4px";
+            this.conteudoNovo3 = document.createTextNode("Google Search");
+            this.aposBarraPesquisa1.appendChild(this.googleSearch);
+            this.googleSearch.appendChild(this.conteudoNovo3);
             document.body.appendChild(this.aposBarraPesquisa1);
-            //Adicionando conteudo a aposBarraPesquisa1
-            this.conteudoNovo3 = document.createTextNode("aposBarraPesquisa1");
-            this.aposBarraPesquisa1.appendChild(this.conteudoNovo3);
+            //Função mouseOver e mouseOut
+            this.googleSearch.onmouseover = function () {
+                console.log(this);//Remover
+                this.style.borderColor = "gray";
+            };
 
+            this.googleSearch.onmouseout = function () {
+                console.log(this);//Remover
+                this.style.borderColor = "white";
+            };
+            this.app.appendChild(this.perfil);
+
+            //Adicionando conteudo I'm Feeling Lucky
+            this.feelingLucky = document.createElement("button");
+            this.feelingLucky.style.height="36px";
+            this.feelingLucky.style.border= "1px solid #f2f2f2";
+            this.feelingLucky.style.borderRadius= "4px";
+            this.feelingLucky.style.marginLeft="10px";
+            this.conteudoNovo4 = document.createTextNode("I'm Feeling Lucky");
+            this.aposBarraPesquisa1.appendChild(this.feelingLucky);
+            this.feelingLucky.appendChild(this.conteudoNovo4);
+            document.body.appendChild(this.aposBarraPesquisa1);
+            //Função mouseOver e mouseOut
+            this.feelingLucky.onmouseover = function () {
+                console.log(this);//Remover
+                this.style.borderColor = "gray";
+            };
+
+            this.feelingLucky.onmouseout = function () {
+                console.log(this);//Remover
+                this.style.borderColor = "white";
+            };
+            this.app.appendChild(this.perfil);
+
+            
             //aposBarraPesquisa2
             this.aposBarraPesquisa2 = document.createElement("div");
             //Setar estilo da div
